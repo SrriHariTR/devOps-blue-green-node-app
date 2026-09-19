@@ -48,8 +48,8 @@ pipeline {
 
         stage('Test Green') {
             steps {
-                bat "timeout /t 5 /nobreak"
-                bat "curl -f http://localhost:3001/"
+                bat 'powershell -Command "Start-Sleep -Seconds 5"'
+                bat 'curl -f http://localhost:3001/'
             }
         }
 
